@@ -36,8 +36,8 @@
   /* Loading: círculo blur pulsando, 3 vezes, suave */
   #loader{position:fixed;inset:0;z-index:100;background:#FEDDE6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:opacity .7s ease}
   #loader.sumiu{opacity:0;pointer-events:none}
-  .circulo-blur{width:120px;height:120px;border-radius:50%;background:rgba(136,3,60,.45);filter:blur(14px);animation:pulsar 1s ease-in-out 3}
-  @keyframes pulsar{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.18);opacity:1}}50%{transform:translateY(-6px) rotate(1.5deg)}}
+  .circulo-blur{width:min(48vw,170px);height:min(48vw,170px);border-radius:50%;background:rgba(136,3,60,.35);filter:blur(22px);margin-top:-28px;animation:pulsar 1.6s ease-in-out 3}
+  @keyframes pulsar{0%,100%{transform:scale(1);opacity:.65}50%{transform:scale(1.10);opacity:.95}}50%{transform:translateY(-6px) rotate(1.5deg)}}
   .carregando{font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;color:#88033C;letter-spacing:2px}
   .carregando .ponto{animation:piscar 1.2s infinite}
   .carregando .ponto:nth-child(2){animation-delay:.2s}
@@ -78,7 +78,7 @@
 </main>
 <script>
   document.addEventListener('DOMContentLoaded', function(){
-    setTimeout(function(){ document.getElementById('loader').classList.add('sumiu'); }, 3200);
+    setTimeout(function(){ document.getElementById('loader').classList.add('sumiu'); }, 5200);
   });
   var fotos = document.querySelectorAll('.foto'), atual = 0;
   function trocar(d){
